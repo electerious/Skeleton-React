@@ -1,7 +1,5 @@
 export default (state) => {
 
-	return {
-		...state
-	}
+	return Object.assign({}, state)
 
 }

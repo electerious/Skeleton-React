@@ -6,10 +6,7 @@ export default (reducers) => (state, action) => {
 
 	// Replace existing state with new state, but keep props
 	// that aren't part of the old state.
-	const nextState = {
-		...state,
-		...action.state
-	}
+	const nextState = Object.assign({}, state, action.state)
 
 	return reducers(nextState, action)
 
