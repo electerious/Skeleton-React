@@ -13,6 +13,6 @@ export default async () => server({
 		'assets/styles/main.css'
 	],
 	scripts: [
-		'assets/scripts/main.js'
+		'assets/scripts/client.js'
 	]
 })

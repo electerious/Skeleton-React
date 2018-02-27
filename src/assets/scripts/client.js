@@ -1,4 +1,4 @@
-import { renderToString } from 'react-dom/server'
+import { hydrate } from 'react-dom'
 import { bindActionCreators } from 'redux'
 import { Provider, connect } from 'react-redux'
 
@@ -6,30 +6,27 @@ import h from './utils/h'
 import createStore from './utils/createStore'
 import enhanceState from './utils/enhanceState'
 import enhanceReducers from './utils/enhanceReducers'
-import layout from './utils/layout'
+import isClient from './utils/isClient'
 import reducers from './reducers'
 import * as actions from './actions'
 
 import Main from './components/Main'
 
-export default (initalState) => {
+if (isClient()===true) {
 
 	const enhancedReducers = enhanceReducers(reducers)
-	const store = createStore(enhancedReducers, initalState)
-	const state = store.getState()
-	const enhancedState = enhanceState(state)
+	const store = createStore(enhancedReducers, window.__STATE__)
 
 	const mapStateToProps = (state) => enhanceState(state)
 	const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch)
 
 	const connectedMain = connect(mapStateToProps, mapDispatchToProps)(Main)
+	const container = document.querySelector('#app')
 
 	const App = h(Provider, { store },
 		h(connectedMain)
 	)
 
-	const html = renderToString(App)
-
-	return layout(html, state, enhancedState)
+	hydrate(App, container)
 
 }
