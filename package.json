@@ -1,0 +1,27 @@
+{
+  "name": "skeleton-react",
+  "version": "1.0.0",
+  "description": "A front-end template build upon Rosid",
+  "private": true,
+  "authors": [
+    "Tobias Reich <tobias@electerious.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electerious/Skeleton-React.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "rosid serve src/ -o",
+    "compile": "rosid compile src/ dist/ -i '**/assets/scripts'"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "rosid": "^9.0.3",
+    "rosid-handler-js": "^10.1.0",
+    "rosid-handler-node": "^7.1.1"
+  }
+}

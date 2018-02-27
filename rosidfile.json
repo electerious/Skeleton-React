@@ -1,0 +1,12 @@
+[
+  {
+    "name": "JS",
+    "path": "assets/scripts/client.js",
+    "handler": "rosid-handler-js"
+  },
+  {
+    "name": "HTML",
+    "path": "[^_]*.{html,js}",
+    "handler": "rosid-handler-node"
+  }
+]
