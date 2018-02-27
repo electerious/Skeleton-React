@@ -3,7 +3,7 @@ export default (body, rawState, enhancedState) => `
 	<html lang="${ enhancedState.head.lang }">
 		<head>
 
-			<title>${ enhancedState.head.title }</title>
+			<title>${ enhancedState.head.title } | ${ enhancedState.head.site }</title>
 
 			<meta charset="utf-8">
 			<meta name="description" content="${ enhancedState.head.description }">

@@ -4,7 +4,8 @@ export default async () => server({
 	head: {
 		lang: 'en',
 		url: '',
-		title: 'Skeleton',
+		site: 'Skeleton',
+		title: 'Index',
 		description: '',
 		twitter: '',
 		opengraph: 'assets/images/og.jpg',
