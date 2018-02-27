@@ -1,3 +1,7 @@
 import { combineReducers } from 'redux'
 
-export default combineReducers({})
+import head from './head'
+
+export default combineReducers({
+	head
+})
