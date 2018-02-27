@@ -1,1 +1,1 @@
-export * from './hydrate'
+export { default as hydrate } from './hydrate'
