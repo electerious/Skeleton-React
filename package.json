@@ -16,12 +16,15 @@
     "compile": "rosid compile src/ dist/ -i '**/assets/scripts'"
   },
   "dependencies": {
+    "basicgrid": "^3.0.1",
+    "normalize.css": "^8.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "rosid": "^9.0.3",
     "rosid-handler-js": "^10.1.0",
-    "rosid-handler-node": "^7.1.1"
+    "rosid-handler-node": "^7.1.1",
+    "rosid-handler-sass": "^6.0.0"
   }
 }

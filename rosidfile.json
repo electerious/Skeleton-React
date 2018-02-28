@@ -5,6 +5,14 @@
     "handler": "rosid-handler-js"
   },
   {
+    "name": "SASS",
+    "path": "assets/styles/**/[^_]*.{css,scss}*",
+    "handler": "rosid-handler-sass",
+    "opts": {
+      "in": ".scss"
+    }
+  },
+  {
     "name": "HTML",
     "path": "[^_]*.{html,js}",
     "handler": "rosid-handler-node"
