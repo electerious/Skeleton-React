@@ -22,10 +22,10 @@ export default (initalState) => {
 	const mapStateToProps = (state) => enhanceState(state)
 	const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch)
 
-	const connectedMain = connect(mapStateToProps, mapDispatchToProps)(Main)
+	const ConnectedMain = connect(mapStateToProps, mapDispatchToProps)(Main)
 
 	const App = h(Provider, { store },
-		h(connectedMain)
+		h(ConnectedMain)
 	)
 
 	const html = renderToString(App)

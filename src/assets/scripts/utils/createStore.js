@@ -1,12 +1,14 @@
-import { createStore } from 'redux'
-
-import isClient from './isClient'
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 export default (reducers, state) => {
 
-	const hasDevTools = isClient()===true && typeof window.__REDUX_DEVTOOLS_EXTENSION__==='function'
-	const devTools = hasDevTools===true ? window.__REDUX_DEVTOOLS_EXTENSION__() : undefined
+	const middlewares = []
 
-	return createStore(reducers, state, devTools)
+	const enhancer = composeWithDevTools(
+		applyMiddleware(...middlewares)
+	)
+
+	return createStore(reducers, state, enhancer)
 
 }

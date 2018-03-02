@@ -22,6 +22,7 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
     "rosid": "^9.0.3",
     "rosid-handler-js": "^10.1.0",
     "rosid-handler-node": "^7.1.1",
