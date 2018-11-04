@@ -12,10 +12,10 @@ import * as actions from './actions'
 
 import Main from './components/Main'
 
-export default (initalState) => {
+export default (initialState) => {
 
 	const enhancedReducers = enhanceReducers(reducers)
-	const store = createStore(enhancedReducers, initalState)
+	const store = createStore(enhancedReducers, initialState)
 	const state = store.getState()
 	const enhancedState = enhanceState(state)
 
